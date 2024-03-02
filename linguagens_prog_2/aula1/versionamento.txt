@@ -1,0 +1,11 @@
+Versionamento semântico
+
+1.2.5
+
+Major.Minor.Patch
+
+Patch: Correção de bugs
+
+Minor: Adição de novas funcionalidades de forma retrocompatível 
+
+Major: Mudanças incompatíveis com a versão anterior
