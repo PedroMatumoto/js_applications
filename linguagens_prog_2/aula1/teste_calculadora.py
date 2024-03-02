@@ -1,10 +1,14 @@
 import calculadora
 def main():
-    a = 2
-    b = 3
-    soma = calculadora.soma(a,b)
-    print(f'A soma de {a} e {b} é {soma}')
-    subtracao = calculadora.substrai(a,b)
-    print(f'A subtração de {a} e {b} é {subtracao}')
+    a = input('Digite o primeiro número: ')
+    b = input('Digite o segundo número: ')
+    opcao = calculadora.menu()
+    if opcao == '1':
+        print('Resultado:', calculadora.soma(a,b))
+    elif opcao == '2':
+        print('Resultado:', calculadora.substrai(a,b))
+    else:
+        print('Saindo...')
+        
 
 main()
