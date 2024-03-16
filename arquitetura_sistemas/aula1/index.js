@@ -66,11 +66,59 @@ console.log(undefined==undefined)
 console.log(undefined==null)
 */
 
-console.log([]==[])
+// console.log([]==[])
+
+
+// let Pessoa ={
+//     nome: "João",
+//     "idade": 17
+// }
+
+// console.log(Pessoa.nome)
+// console.log(Pessoa.idade)
+// console.log(Pessoa['nome'])
 
 
 
+// console.log(Pessoa2.["endereco"].rua)
 
 
 
+// let concessionaria = {
+//     "nome": "Concessionária",
+//     "Cnpj": "12.345.678/0001-99",
 
+//     "Endereco": {
+//         "rua": "Rua 1",
+//         "numero": 12,
+//         "complemento": null
+//     },
+
+//     "carros": [
+//         {
+//             "modelo": "Fusca",
+//             "ano": 1970,
+//             "AnoFabricacao": 1969,
+//         },
+//         {
+//             "modelo": "Gol",
+//             "ano": 2010,
+//             "AnoFabricacao": 2009,
+//         }
+//     ]
+// }
+
+// console.log(concessionaria.carros[1].modelo)
+
+// for (let i = 0; i < concessionaria.carros.length; i++) {
+//     if (concessionaria.carros[i].modelo)
+//         console.log(concessionaria.carros[i].modelo)
+// }
+
+let calculadora = {
+    // arrow function
+    somar:(a,b) => a+b,
+    // function expression
+    subtrair: function(a,b) {return a-b},
+    
+}
