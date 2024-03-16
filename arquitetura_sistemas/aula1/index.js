@@ -115,10 +115,9 @@ console.log(undefined==null)
 //         console.log(concessionaria.carros[i].modelo)
 // }
 
-let calculadora = {
-    // arrow function
-    somar:(a,b) => a+b,
-    // function expression
-    subtrair: function(a,b) {return a-b},
-    
-}
+// let calculadora = {
+//     // arrow function
+//     somar:(a,b) => a+b,
+//     // function expression
+//     subtrair: function(a,b) {return a-b},
+// }
