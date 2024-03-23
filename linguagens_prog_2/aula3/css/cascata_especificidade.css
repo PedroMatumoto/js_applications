@@ -1,0 +1,38 @@
+#titulo{
+    color: blue;
+}
+
+.descricao{
+    color: red;
+}
+
+p{
+    color: green;
+}
+
+
+/* 11 pontos */
+.principal article{
+
+}
+
+/* 2 pontos */
+main article{
+
+}
+
+/* 1 pontos */
+main, article{
+
+}
+
+/* tipo - 1 unidade*/
+/* id>class>tag*/
+/* # -> id*/
+/* . -> class*/
+/* tag -> tag*/ 
+
+/* 2 7 12*/
+#teste1 body> .c1 .c2 > div > div > div > p > .c2.c3.c4#abc > p > p p p p p > div .classeFinal .ufa{
+
+}

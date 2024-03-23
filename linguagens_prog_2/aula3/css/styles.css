@@ -1,0 +1,36 @@
+#titulo
+{
+    color: blue;
+
+}
+
+p#descricao{
+    font-size: 20px;
+}
+
+p.final-pagina#rodape
+{
+    color: red;
+}
+
+.novo-curso{
+    color: green;
+}
+
+
+.curso , .novo-curso{
+    background-color: rgb(204, 47, 47);
+}
+
+    
+    /* h1 {
+        color: blue;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    strong {
+        color: red;
+    } */

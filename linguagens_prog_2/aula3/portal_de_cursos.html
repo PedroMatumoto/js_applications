@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS</title>
+    <!-- <link rel="stylesheet" href="css/styles.css"> -->
+</head>
+
+<style>
+    article p {
+        background-color: lightgray;
+        border: 1px solid black;
+        padding: 10px;
+        margin: 10px;
+    }
+
+    /* estamos procurando p com a classe promoção descendente de um qualquer com id principal */
+    #principal p.promocao{
+        padding:12px;
+        background-color: yellow;
+    }
+
+    /* todos os p com classe coordenadores , descedentes de section, descedentes de article, descedente de um elemento com id principal e descendente de body */
+    body #principal article section p.coordenadores{
+        color: red;
+    }
+
+
+    article > p{
+        border: 1px solid black;
+    }
+
+    /* espaço significa descendente*/
+    main > article , section > p.coordenadores{
+        font-weight: bold;
+    }
+
+</style>
+
+
+<body>
+    <main id="principal">
+        <h1 id="titulo">Portal de cursos</h1>
+        
+        <p id="descricao" style="color: aquamarine">Temos cursos de diversas áreas</p>
+        <!-- <p id="promocao" style="color: blueviolet">Venha conversar conosco e conhecer ofertas de
+                <strong>bolsas de estudo
+                </strong>	 -->
+        <p class="promocao" style="color: blueviolet">Venha conversar conosco e conhecer ofertas de
+            <strong>bolsas de estudo
+            </strong>
+        </p>
+        
+        <p>Cursos:</p>
+        <article>
+        
+            <p class="novo-curso">RI</p>
+            <p class="curso">Engenharia</p>
+            <p class="curso">Direito</p>
+
+            <section>
+                <p class="coordenadores">Coordenadores:</p>
+                <p class="coordenadores">João</p>
+                <p class="coordenadores">Maria</p>
+            </section>
+        </article>
+        
+        <p id="contato" class="final-pagina">Entre em contato</p>
+        <p id="rodape" class="final-pagina"> &copy; Todos os direitos reservdados</p>
+    </main>
+    
+</body>
+
+</html>
