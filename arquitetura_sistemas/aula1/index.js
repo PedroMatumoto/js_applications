@@ -121,3 +121,62 @@ console.log(undefined==null)
 //     // function expression
 //     subtrair: function(a,b) {return a-b},
 // }
+
+
+// const executa = (f) =>{
+//     f()
+// }
+
+
+// // ==========EXEMPLO DE CALLBACK==================
+
+// const fs = require('fs')
+
+// const abrirArquivo = (nomeArquivo)=>{
+//     const exibirConteudo = function(erro, conteudo){
+//         if (erro){
+//             console.log(`Erro ao abrir o arquivo ${nomeArquivo}`)
+//             console.log(`Deu erro: ${erro}`)
+//         }
+//         else{
+//             console.log(conteudo.toString())
+//             const dobro = Number(conteudo.toString())*2
+//             const finalizar = function(erro){
+//                 console.log(`Salvou `)
+
+//             }
+//             fs.writeFile('dobro.txt',dobro.toString(),finalizar)
+//         }
+//     }
+//     fs.readFile(nomeArquivo,exibirConteudo)
+// }
+
+// abrirArquivo('numero.txt')
+// //================================================
+
+
+
+// const calculadoDemorado = (n) =>{
+//     let p = new Promise(function(resolve,reject){
+//         let res = 0
+//         for(let i = 1; i <= n; i++) res += i
+//         resolve({a:res,b:res*2})
+//     })
+//     return p
+// }
+
+// const promise = calculadoDemorado(10)
+// promise.then((res)=>{
+//     console.log(res.a)
+// })
+
+// // processamento assincrono
+// function calculoRapidinho(n){
+//     return n>=1 ? Promise.resolve(n/2*(n+1)):Promise.reject('Erro')
+// }
+
+// calculoRapidinho(15).then((res)=>{ console.log(res)}).catch((reject)=>{console.log(reject)})
+
+
+
+
