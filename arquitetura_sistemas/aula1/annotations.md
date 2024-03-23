@@ -7,3 +7,12 @@
 - Não possui threads
 - Bloquante ou não bloqueante
 
+# Aula 5 
+23/03/2024
+- Inferno 🔥 de callback
+Cada uma chama outra, formando um hadouken
+- Função de callback
+- Diferença entre import e require
+Require é antecessor, Import é mais novo
+- Promises
+
