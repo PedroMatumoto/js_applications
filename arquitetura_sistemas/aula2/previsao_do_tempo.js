@@ -1,51 +1,84 @@
-require('dotenv').config()
 
-// console.log(process.env.APP_ID)
 
-const{
-    APP_ID,
-    Q,
-    CNT,
-    UNITS,
-    LANG_WEATHER,
-    PROTOCOL,
-    BASE_URL,
-} = process.env
+function hello(nome){
+    return `Olá, ${nome}`
+}
 
-const url = `${PROTOCOL}://${BASE_URL}?appid=${APP_ID}&q=${Q}&cnt=${CNT}&units=${UNITS}&lang=${LANG_WEATHER}`
+async function hello_async(nome){
+    return `Olá, ${nome}`
+}
 
-console.log(url)
+function hello_promise(nome){
+    return Promise.resolve(`Olá, ${nome}`)
+}
 
-const axios = require('axios')
 
-axios.get(url)
+const fatorial = (n) => {
+    if (n<0) return Promise.reject('Número negativo')
+    let res = 1
+    for (let i=1; i<=n; i++) res *= i
+    return Promise.resolve(res)
+}
+
+
+
+hello_promise('Fulano')
     .then(response => {
-        console.log(response.data)
-        console.log('***************************')
-        return response.data
+        console.log(response)
     })
-    .then(response => {
-        console.log(`CNT: ${response.cnt}`)
-        console.log('***************************')
-        return response
-    })
-    .then(response => {
-        for (let previsao of response.list) {
-            console.log('***************************')
-            console.log(previsao)
-            console.log(`Data: 
-            ${new Date(previsao.dt * 1000).toTimeString()}:
-            max: ${previsao.main.temp_max}
-            min: ${previsao.main.temp_min}
-            descrição: ${previsao.weather[0].description}`)
-            // mostrar a temperatura
+
+
+
+
+
+// require('dotenv').config()
+
+// // console.log(process.env.APP_ID)
+
+// const{
+//     APP_ID,
+//     Q,
+//     CNT,
+//     UNITS,
+//     LANG_WEATHER,
+//     PROTOCOL,
+//     BASE_URL,
+// } = process.env
+
+// const url = `${PROTOCOL}://${BASE_URL}?appid=${APP_ID}&q=${Q}&cnt=${CNT}&units=${UNITS}&lang=${LANG_WEATHER}`
+
+// console.log(url)
+
+// const axios = require('axios')
+
+// axios.get(url)
+//     .then(response => {
+//         console.log(response.data)
+//         console.log('***************************')
+//         return response.data
+//     })
+//     .then(response => {
+//         console.log(`CNT: ${response.cnt}`)
+//         console.log('***************************')
+//         return response
+//     })
+//     .then(response => {
+//         for (let previsao of response.list) {
+//             console.log('***************************')
+//             console.log(previsao)
+//             console.log(`Data: 
+//             ${new Date(previsao.dt * 1000).toTimeString()}:
+//             max: ${previsao.main.temp_max}
+//             min: ${previsao.main.temp_min}
+//             descrição: ${previsao.weather[0].description}`)
+//             // mostrar a temperatura
             
-            // mostrar a descricao do tempo
-            console.log(`Descrição: ${previsao.weather[0].description}`)
+//             // mostrar a descricao do tempo
+//             console.log(`Descrição: ${previsao.weather[0].description}`)
 
-        }
-        return response
-    })
+//         }
+//         return response
+//     })
 
 
 
