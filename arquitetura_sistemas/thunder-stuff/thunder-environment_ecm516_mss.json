@@ -1,0 +1,20 @@
+{
+    "client": "Thunder Client",
+    "environmentName": "ecm516_mss",
+    "dateExported": "2024-04-27T13:36:19.222Z",
+    "version": "1.0",
+    "variables": [
+        {
+            "name": "server",
+            "value": "localhost"
+        },
+        {
+            "name": "port",
+            "value": "4000"
+        },
+        {
+            "name": "endpoint",
+            "value": "lembretes"
+        }
+    ]
+}
