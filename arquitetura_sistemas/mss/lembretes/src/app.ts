@@ -36,9 +36,26 @@ app.post('/lembretes',(req,res)=>{
         id: id,
         texto: texto
     }
-    id= (+id + 1).toString()
+    Lembretes[id] = lembrete
+    id = String(Number(id) + 1)
     res.json(Lembretes)
 })
+
+app.delete('/lembretes/:id', (req,res) => {
+    const {id} = req.params
+    if (!Lembretes[id]) return res.status(404).json({erro: 'lembrete não encontrado'})
+    delete Lembretes[id]
+    res.status(204).send()
+})
+
+app.put('/lembretes/:id',(req,res)=>{
+    const {id} = req.params
+    const {texto} = req.body
+    if (!Lembretes[id]) return res.status(404).json({erro: 'lembrete não encontrado'})
+    Lembretes[id].texto = texto
+    res.json(Lembretes[id])
+})
+
 
 const PORT: number = 4000
 
