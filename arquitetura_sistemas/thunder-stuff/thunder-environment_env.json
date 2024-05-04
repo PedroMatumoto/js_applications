@@ -1,0 +1,36 @@
+{
+    "client": "Thunder Client",
+    "environmentName": "env",
+    "dateExported": "2024-05-04T14:13:43.400Z",
+    "version": "1.0",
+    "variables": [
+        {
+            "name": "server",
+            "value": "localhost"
+        },
+        {
+            "name": "port_lembretes",
+            "value": "4001"
+        },
+        {
+            "name": "endpoint_lembretes",
+            "value": "lembretes"
+        },
+        {
+            "name": "port_observacao",
+            "value": "5001"
+        },
+        {
+            "name": "endpoint_observacoes",
+            "value": "observacoes"
+        },
+        {
+            "name": "port_consulta",
+            "value": "6001"
+        },
+        {
+            "name": "endpoint_consulta",
+            "value": "consultas"
+        }
+    ]
+}

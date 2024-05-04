@@ -1,0 +1,23 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Eventos",
+    "dateExported": "2024-05-04T14:13:36.859Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "a2d2c88e-8624-41a6-861c-2222fd4fc235",
+            "colId": "7d9a2410-b1c9-4332-9aed-58e32e945faf",
+            "containerId": "",
+            "name": "Pegar Eventos",
+            "url": "{{server}}:{{port_consulta}}/{{endpoint_consulta}}",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-05-04T13:56:02.775Z",
+            "modified": "2024-05-04T13:59:59.740Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
