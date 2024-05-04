@@ -11,11 +11,12 @@ app.use(express.json())
 
 const {PORT} = process.env
 
-function avisarObservacoesCriado(id: string){
-    axios.post(`http://localhost:10000/eventos`,{
+function avisarObservacoesCriado(Observacao: Observacao){
+    axios.post(`http://localhost:10001/eventos`,{
         tipo:"ObservacaoCriado",
         dados:{
-            id
+            id: Observacao.id,
+            texto: Observacao.texto
         }
     })
 }
@@ -36,7 +37,7 @@ app.post("/lembretes/:id/observacoes", (req, res) => {
     observacoes.push(observacao)
     base[req.params.id] = observacoes
     res.status(201).json(observacao)
-    avisarObservacoesCriado(req.params.id)
+    avisarObservacoesCriado(observacao)
 })
 
 app.get("/lembretes/:id/observacoes", (req, res) => {

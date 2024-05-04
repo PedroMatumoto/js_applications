@@ -16,11 +16,12 @@ app.use(express.json())
 //     }
 // }
 
-function avisarLembreteCriado(id: string){
-    axios.post(`http://localhost:10000/eventos`,{
+function avisarLembreteCriado(Lembrete: Lembrete){
+    axios.post(`http://localhost:10001/eventos`,{
         tipo:"LembreteCriado",
         dados:{
-            id
+            id: Lembrete.id,
+            texto: Lembrete.texto
         }
     })
 }
@@ -50,7 +51,7 @@ app.post('/lembretes',(req,res)=>{
     Lembretes[id] = lembrete
     id = String(Number(id) + 1)
     res.json(Lembretes)
-    avisarLembreteCriado(id)
+    avisarLembreteCriado(lembrete)
 })
 
 app.delete('/lembretes/:id', (req,res) => {
