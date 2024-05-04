@@ -15,6 +15,17 @@ app.use(express.json())
 //         "texto": "Natação",
 //     }
 // }
+
+function avisarLembreteCriado(id: string){
+    axios.post(`http://localhost:10000/eventos`,{
+        tipo:"LembreteCriado",
+        dados:{
+            id
+        }
+    })
+}
+
+
 interface Lembrete{
     id:string;
     texto:string;
@@ -39,6 +50,7 @@ app.post('/lembretes',(req,res)=>{
     Lembretes[id] = lembrete
     id = String(Number(id) + 1)
     res.json(Lembretes)
+    avisarLembreteCriado(id)
 })
 
 app.delete('/lembretes/:id', (req,res) => {
@@ -56,8 +68,13 @@ app.put('/lembretes/:id',(req,res)=>{
     res.json(Lembretes[id])
 })
 
+app.post('/eventos', (req, res) => {
+    console.log(req.body)
+    res.status(200).send({msg: 'ok'})
+    })
 
-const PORT: number = 4000
+
+const PORT: number = 4001
 
 app.listen(PORT, () => {
   console.log(`Lembretes: ${PORT}`)
